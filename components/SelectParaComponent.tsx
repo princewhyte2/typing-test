@@ -13,17 +13,20 @@ const SelectParaComponent = (): JSX.Element => {
 
   return (
     <div>
-      <h1>Challenge Component</h1>
+      <h1>Use default or Choose test paragraph</h1>
 
       <textarea
+        data-testid="init-paragraph"
         className=" min-h-[25rem] font-bold p-4 min-w-full md:min-w-[30rem] border rounded outline-none"
         value={paragraph}
         onChange={(e) => setParagraph(e.target.value)}
-      ></textarea>
+      />
 
       <div className="flex space-x-4 justify-end">
         <Link href="/challenge/select-timer">
-          <button className="border font-bold py-2 px-4 rounded">use paragraph</button>
+          <button data-testid="use-para" className="border font-bold py-2 px-4 rounded">
+            use paragraph
+          </button>
         </Link>
       </div>
     </div>

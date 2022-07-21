@@ -89,8 +89,10 @@ const TestComponent = (): JSX.Element => {
 
   return (
     <div className="flex flex-col justify-center space-y-4">
-      <h1>Challenge Component</h1>
-      <p>
+      <h1 className=" text-green-500 font-medium text-base">
+        Start your challenge by hitting Enter on the test box. Note that once started and you hit Enter again test ends
+      </h1>
+      <p data-testid="test-init-paragraph">
         <span className={`${timer < 5 && timer > 0 ? "animate-ping" : ""} font-semibold text-6xl mx-4 text-red-500`}>
           {timer}
         </span>
@@ -99,6 +101,7 @@ const TestComponent = (): JSX.Element => {
       <p className="font-bold border rounded-md p-4">{paragraph}</p>
 
       <textarea
+        data-testid="user-paragraph"
         placeholder='start typing here... press "Enter" key to start and when done, press the "Enter" key'
         value={inputValue}
         onChange={handleChange}
@@ -131,6 +134,7 @@ const TestComponent = (): JSX.Element => {
 
                 <div className="mt-4 flex justify-center">
                   <button
+                    data-testid="game-over-btn"
                     type="button"
                     className="inline-flex  justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                     onClick={closeModal}

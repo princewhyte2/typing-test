@@ -25,9 +25,9 @@ const SelectTimerComponent = (): JSX.Element => {
 
   return (
     <div className="flex flex-col space-y-3">
-      <h1>Timer Component</h1>
+      <h1>Select Timer</h1>
       <p className="text-center">
-        <span className=" font-semibold text-6xl">{timer}</span>secs
+        <span className=" font-semibold text-6xl">{timer} </span>secs
       </p>
       <div className="flex space-x-4 items-center border p-4 rounded-md">
         <div className="flex-1">
@@ -48,7 +48,9 @@ const SelectTimerComponent = (): JSX.Element => {
       </div>
       <div className="flex space-x-4 justify-end">
         <Link href="/challenge/test">
-          <button className="border font-bold py-2 px-4 rounded">Go to challenge</button>
+          <button data-testid="go-to-challenge-btn" className="border font-bold py-2 px-4 rounded">
+            Go to challenge
+          </button>
         </Link>
       </div>
     </div>
