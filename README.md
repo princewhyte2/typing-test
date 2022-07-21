@@ -1,5 +1,7 @@
 This is a next js App
 
+Live demo: [https://typing-test-iota.vercel.app/](https://typing-test-iota.vercel.app/)
+
 Installing dependencies using your package manager of choice (npm, yarn, etc.)
 i'm using yarn
 

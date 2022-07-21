@@ -33,14 +33,6 @@ const Header = () => {
   )
 }
 
-const Footer = () => {
-  return (
-    <footer>
-      <h1>Footer</h1>
-    </footer>
-  )
-}
-
 const Layout = ({ children }: { children: any }) => {
   return (
     <div className="min-h-screen font-Roboto  flex flex-col bg-white text-black dark:text-white dark:bg-black">
@@ -48,7 +40,6 @@ const Layout = ({ children }: { children: any }) => {
       <main className="container max-w-2xl flex items-center justify-center mx-auto px-4 sm:px-6 flex-1">
         {children}
       </main>
-      <Footer />
     </div>
   )
 }
