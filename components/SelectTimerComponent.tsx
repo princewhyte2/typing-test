@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { convertMinutesToSeconds } from "../utils"
 import useStore, { IState } from "../store"
-import { useState } from "react"
+import { useEffect } from "react"
 
 const SelectTimerComponent = (): JSX.Element => {
   //timer from store
@@ -17,6 +17,11 @@ const SelectTimerComponent = (): JSX.Element => {
       setTimer(convertMinutesToSeconds(Number(e.target.value)))
     }
   }
+
+  //set timer to 60 seconds on initial render
+  useEffect((): void => {
+    setTimer(60)
+  }, [setTimer])
 
   return (
     <div className="flex flex-col space-y-3">
