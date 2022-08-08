@@ -1,4 +1,4 @@
-This is a next js App
+This is a simple next js App for testing a user typing speed.
 
 Live demo: [https://typing-test-iota.vercel.app/](https://typing-test-iota.vercel.app/)
 
